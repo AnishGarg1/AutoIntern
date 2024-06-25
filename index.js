@@ -1,7 +1,4 @@
-import edgeChromium from 'chrome-aws-lambda';
-import puppeteer from 'puppeteer-core';
-
-// const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer");
 require("dotenv").config();
 
 const url = process.env.URL;
@@ -9,19 +6,15 @@ const intern_job = "jobs"; // jobs/internships
 const keyword = "AskMeOffers";
 let n = 3;
 
-const LOCAL_CHROME_EXECUTABLE = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
-
 const startAutoApply = async () => {
     try {
         // Path to the full version of chrome
-        const executablePath = await edgeChromium.executablePath || LOCAL_CHROME_EXECUTABLE;
+        const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 
         // Launching the browser instance
         const browser = await puppeteer.launch({
             headless: false,
-            executablePath,
-            // executablePath: chromePath,
-            args: edgeChromium.args,
+            executablePath: chromePath,
             defaultViewport: null,
             // slowMo: 100,
             args: ["--start-maximized"],
