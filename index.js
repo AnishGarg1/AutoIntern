@@ -14,7 +14,7 @@ const startAutoApply = async () => {
         // Launching the browser instance
         const browser = await puppeteer.launch({
             headless: false,
-            executablePath: chromePath,
+            // executablePath: chromePath,
             defaultViewport: null,
             // slowMo: 100,
             args: ["--start-maximized"],
