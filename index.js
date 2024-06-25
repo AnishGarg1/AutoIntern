@@ -124,4 +124,6 @@ const waitAndAction = async (page, selector, action, typedText) => {
     }
 }
 
-startAutoApply();
+// startAutoApply();
+
+module.exports = startAutoApply;
