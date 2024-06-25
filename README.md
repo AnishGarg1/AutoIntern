@@ -1,7 +1,3 @@
-Sure! Here is a sample README file for your project:
-
----
-
 # AutoIntern
 
 AutoIntern is a Node.js application that automates the process of applying to jobs on a specified job portal using Puppeteer. This project uses Express.js for serving a simple web interface and Puppeteer to automate browser interactions.
